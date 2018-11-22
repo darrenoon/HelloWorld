@@ -1,0 +1,5 @@
+let
+    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("ZZLLbuIwFEB/xWINV37G9hZoWYzKqGWkLBALt1glKmNLSVDF38+1QS7ObCxZ5/rcl/f72ab3bvQ9Wfbd8O6Cn81nmyUeu6dXPBdcgzRM6QYvTHHQ0hprKzInD+Aw389WPoy9O2PQaovHm//sYsj3BZcghVFKJJ2UQC1lylYEdT8g6dauP3fhk6zjdxjIgvyJ8TvGv+8On63X0wQalKKcyZzAAuXUlnpvJCUoICV4dj3Zxn48YdjztGKmgTXYGstCAVZxrXRFkrCAJNzE85GsohvGNM3VwzQNMC0ak9tXAvCJ4bIiaZoFJNmL+/hyV9KeunG4hKO7Dhj/8utByoDKhjY8V6hBW0O1rkiqsIAkze2S1ucKt+10iBQwv5E0G/GitFa0IslYQDH6PiTf7+kMLRhDed4Dkw3g6BupK5J8BSTfLl5+Ktz9VyEuU1gr7X0rDRWKm4rctnIH2XgJw6kLvmxm97iZBoRhIv/FtACG7VFWkdtm7iAJ2+7oydJdMapdTgtUwKg1t4+uGODXUFxVJPkKOBz+AQ==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type text) meta [Serialized.Text = true]) in type table [#"CSQ Region" = _t, #"Short Name" = _t, SEQ = _t, Latitude = _t, Longitude = _t, Coordinates = _t]),
+    #"Changed Type1" = Table.TransformColumnTypes(Source,{{"Latitude", type number}, {"Longitude", type number}})
+in
+    #"Changed Type1"
